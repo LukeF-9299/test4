@@ -1,0 +1,439 @@
+{
+  "categories": {
+    "manual": {
+      "category_name": "Manual",
+      "description": "User manuals, instruction guides, and procedural documents",
+      "keywords": [
+        "manual",
+        "guide",
+        "instructions",
+        "procedure",
+        "steps",
+        "how to",
+        "usage"
+      ],
+      "expected_fields": {
+        "manual_title": {
+          "description": "Title of the manual",
+          "type": "text",
+          "required": true
+        },
+        "version": {
+          "description": "Manual version number",
+          "type": "text",
+          "required": true
+        },
+        "date": {
+          "description": "Manual publication or last updated date",
+          "type": "date",
+          "required": true
+        },
+        "sections": {
+          "description": "Main sections of the manual",
+          "type": "list",
+          "required": true
+        },
+        "instructions": {
+          "description": "Step-by-step instructions for use",
+          "type": "section",
+          "required": true
+        }
+      }
+    },
+    "specification": {
+      "category_name": "Specification",
+      "description": "Technical specifications, requirements documents, and design specs",
+      "keywords": [
+        "specification",
+        "requirements",
+        "technical",
+        "design",
+        "parameters",
+        "standards"
+      ],
+      "expected_fields": {
+        "spec_title": {
+          "description": "Title of the specification document",
+          "type": "text",
+          "required": true
+        },
+        "version": {
+          "description": "Specification version number",
+          "type": "text",
+          "required": true
+        },
+        "date": {
+          "description": "Specification date or last revision",
+          "type": "date",
+          "required": true
+        },
+        "requirements": {
+          "description": "Functional and non-functional requirements",
+          "type": "section",
+          "required": true
+        },
+        "technical_parameters": {
+          "description": "Technical specifications and parameters",
+          "type": "section",
+          "required": true
+        },
+        "standards": {
+          "description": "Applicable standards and regulations",
+          "type": "list",
+          "required": true
+        }
+      }
+    },
+    "letter": {
+      "category_name": "Letter",
+      "description": "Business letters, correspondence, and formal communications",
+      "keywords": [
+        "dear",
+        "sincerely",
+        "regards",
+        "letter",
+        "correspondence",
+        "to",
+        "from",
+        "subject"
+      ],
+      "expected_fields": {
+        "date": {
+          "description": "Date the letter was written",
+          "type": "date",
+          "required": true
+        },
+        "sender": {
+          "description": "Letter sender information",
+          "type": "text",
+          "required": true
+        },
+        "recipient": {
+          "description": "Letter recipient information",
+          "type": "text",
+          "required": true
+        },
+        "subject": {
+          "description": "Subject line or purpose of the letter",
+          "type": "text",
+          "required": true
+        },
+        "body": {
+          "description": "Main content of the letter",
+          "type": "section",
+          "required": true
+        },
+        "signature": {
+          "description": "Sender's signature",
+          "type": "text",
+          "required": true
+        }
+      }
+    },
+    "report": {
+      "category_name": "Report",
+      "description": "Business reports, analysis reports, progress reports, and status updates",
+      "keywords": [
+        "report",
+        "summary",
+        "findings",
+        "recommendations",
+        "analysis",
+        "status",
+        "progress"
+      ],
+      "expected_fields": {
+        "report_title": {
+          "description": "Title of the report",
+          "type": "text",
+          "required": true
+        },
+        "date": {
+          "description": "Report date or period covered",
+          "type": "date",
+          "required": true
+        },
+        "author": {
+          "description": "Report author or department",
+          "type": "text",
+          "required": true
+        },
+        "executive_summary": {
+          "description": "Brief overview of key findings and recommendations",
+          "type": "section",
+          "required": true
+        },
+        "findings": {
+          "description": "Main findings and discoveries",
+          "type": "section",
+          "required": true
+        },
+        "recommendations": {
+          "description": "Recommendations based on findings",
+          "type": "section",
+          "required": true
+        }
+      }
+    },
+    "form": {
+      "category_name": "Form",
+      "description": "Application forms, registration forms, and structured data collection documents",
+      "keywords": [
+        "form",
+        "application",
+        "registration",
+        "fields",
+        "signature",
+        "date",
+        "name"
+      ],
+      "expected_fields": {
+        "form_title": {
+          "description": "Title of the form",
+          "type": "text",
+          "required": true
+        },
+        "date": {
+          "description": "Form completion date",
+          "type": "date",
+          "required": true
+        },
+        "applicant_name": {
+          "description": "Name of the person completing the form",
+          "type": "text",
+          "required": true
+        },
+        "contact_info": {
+          "description": "Contact information (address, phone, email)",
+          "type": "text",
+          "required": true
+        },
+        "fields": {
+          "description": "List of form fields and their descriptions",
+          "type": "list",
+          "required": true
+        },
+        "signature": {
+          "description": "Applicant's signature",
+          "type": "text",
+          "required": true
+        }
+      }
+    },
+    "academic_paper": {
+      "category_name": "Academic Paper",
+      "description": "Research papers, theses, dissertations, and scholarly articles",
+      "keywords": [
+        "abstract",
+        "methodology",
+        "results",
+        "conclusion",
+        "references",
+        "research",
+        "study",
+        "analysis"
+      ],
+      "expected_fields": {
+        "title": {
+          "description": "The main title of the academic paper",
+          "type": "text",
+          "required": true
+        },
+        "authors": {
+          "description": "List of authors who contributed to the paper",
+          "type": "list",
+          "required": true
+        },
+        "abstract": {
+          "description": "Brief summary of the research paper (150-300 words)",
+          "type": "paragraph",
+          "required": true
+        },
+        "keywords": {
+          "description": "Key terms and phrases for indexing and search",
+          "type": "list",
+          "required": false
+        },
+        "introduction": {
+          "description": "Introduction section providing background and research context",
+          "type": "section",
+          "required": true
+        },
+        "methodology": {
+          "description": "Research methods and experimental design used",
+          "type": "section",
+          "required": true
+        },
+        "results": {
+          "description": "Research findings and statistical results",
+          "type": "section",
+          "required": true
+        },
+        "conclusion": {
+          "description": "Concluding remarks and summary of contributions",
+          "type": "section",
+          "required": true
+        },
+        "references": {
+          "description": "Bibliography and cited works",
+          "type": "list",
+          "required": true
+        }
+      }
+    },
+    "contract": {
+      "category_name": "Contract",
+      "description": "Legal contracts, agreements, and binding documents",
+      "keywords": [
+        "contract",
+        "agreement",
+        "terms",
+        "conditions",
+        "party",
+        "obligations",
+        "liability"
+      ],
+      "expected_fields": {
+        "contract_title": {
+          "description": "Title of the contract agreement",
+          "type": "text",
+          "required": true
+        },
+        "parties": {
+          "description": "Information about all parties involved in the contract",
+          "type": "list",
+          "required": true
+        },
+        "effective_date": {
+          "description": "Date when contract becomes effective",
+          "type": "date",
+          "required": true
+        },
+        "obligations": {
+          "description": "Obligations and responsibilities of each party",
+          "type": "section",
+          "required": true
+        },
+        "payment_terms": {
+          "description": "Payment terms and compensation details",
+          "type": "section",
+          "required": true
+        },
+        "signatures": {
+          "description": "Signature lines and signing parties",
+          "type": "section",
+          "required": true
+        }
+      }
+    },
+    "invoice": {
+      "category_name": "Invoice",
+      "description": "Commercial invoices, billing documents, and payment requests",
+      "keywords": [
+        "invoice",
+        "bill",
+        "payment",
+        "due",
+        "amount",
+        "total",
+        "tax",
+        "customer",
+        "vendor"
+      ],
+      "expected_fields": {
+        "invoice_number": {
+          "description": "Unique identifier for the invoice",
+          "type": "text",
+          "required": true
+        },
+        "date": {
+          "description": "Date when invoice was issued",
+          "type": "date",
+          "required": true
+        },
+        "due_date": {
+          "description": "Payment due date",
+          "type": "date",
+          "required": true
+        },
+        "customer_name": {
+          "description": "Name of the customer being billed",
+          "type": "text",
+          "required": true
+        },
+        "vendor_name": {
+          "description": "Name of the vendor issuing the invoice",
+          "type": "text",
+          "required": true
+        },
+        "items": {
+          "description": "List of products or services being billed",
+          "type": "list",
+          "required": true
+        },
+        "total_amount": {
+          "description": "Total amount due",
+          "type": "amount",
+          "required": true
+        }
+      }
+    },
+    "resumecv": {
+      "category_name": "Resume/CV",
+      "description": "Resumes, curriculum vitae, and professional profiles",
+      "keywords": [
+        "resume",
+        "curriculum vitae",
+        "experience",
+        "education",
+        "skills",
+        "employment"
+      ],
+      "expected_fields": {
+        "name": {
+          "description": "Full name of the person",
+          "type": "text",
+          "required": true
+        },
+        "contact_info": {
+          "description": "Contact information (address, phone, email, LinkedIn)",
+          "type": "text",
+          "required": true
+        },
+        "objective": {
+          "description": "Career objective or professional summary",
+          "type": "paragraph",
+          "required": false
+        },
+        "education": {
+          "description": "Educational background and degrees",
+          "type": "section",
+          "required": true
+        },
+        "work_experience": {
+          "description": "Work experience and employment history",
+          "type": "section",
+          "required": true
+        },
+        "skills": {
+          "description": "Technical and professional skills",
+          "type": "list",
+          "required": true
+        }
+      }
+    },
+    "other": {
+      "name": "Other",
+      "description": "Documents that don't fit into any specific category",
+      "keywords": [],
+      "expected_fields": {}
+    }
+  },
+  "metadata": {
+    "version": "2.0",
+    "created_date": "2026-03-31",
+    "updated_date": "2026-03-31",
+    "description": "Document classification categories with keywords, expected fields, and field descriptions",
+    "auto_generated": true
+  }
+}
