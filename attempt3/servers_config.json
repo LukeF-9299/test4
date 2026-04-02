@@ -1,0 +1,90 @@
+{
+  "servers": [
+    {
+      "name": "OpenAI GPT-4",
+      "endpoint": "https://api.openai.com",
+      "models": ["gpt-4", "gpt-4-turbo-preview", "gpt-4-1106-preview"],
+      "weight": 3,
+      "api_key_required": true,
+      "adapter_type": "openai",
+      "description": "OpenAI's GPT-4 models"
+    },
+    {
+      "name": "OpenAI GPT-3.5",
+      "endpoint": "https://api.openai.com", 
+      "models": ["gpt-3.5-turbo", "gpt-3.5-turbo-16k"],
+      "weight": 2,
+      "api_key_required": true,
+      "adapter_type": "openai",
+      "description": "OpenAI's GPT-3.5 models"
+    },
+    {
+      "name": "OpenAI Embeddings",
+      "endpoint": "https://api.openai.com",
+      "models": ["text-embedding-3-small", "text-embedding-3-large", "text-embedding-ada-002"],
+      "weight": 1,
+      "api_key_required": true,
+      "adapter_type": "openai",
+      "description": "OpenAI embedding models"
+    },
+    {
+      "name": "Local Llama Server",
+      "endpoint": "http://localhost:8080",
+      "models": ["llama-2-7b-chat", "llama-2-13b-chat", "llama-2-70b-chat"],
+      "weight": 1,
+      "api_key_required": false,
+      "adapter_type": "openai",
+      "description": "Local Llama 2 models (OpenAI-compatible)"
+    },
+    {
+      "name": "Custom LLM Server 1",
+      "endpoint": "http://localhost:8081",
+      "models": ["custom-model-v1", "custom-model-v2"],
+      "weight": 2,
+      "api_key_required": false,
+      "adapter_type": "openai",
+      "description": "Custom LLM server with OpenAI-compatible API"
+    },
+    {
+      "name": "Custom LLM Server 2",
+      "endpoint": "http://localhost:8082",
+      "models": ["custom-model-v1", "custom-model-v2"],
+      "weight": 1,
+      "api_key_required": false,
+      "adapter_type": "openai",
+      "description": "Second custom LLM server for load balancing"
+    },
+    {
+      "name": "Custom Embedding Service",
+      "endpoint": "http://localhost:9000",
+      "models": ["custom-embedding-v1", "custom-embedding-v2"],
+      "weight": 1,
+      "api_key_required": false,
+      "adapter_type": "custom",
+      "endpoints": {
+        "completion": "/generate",
+        "embedding": "/embed"
+      },
+      "request_format": "custom",
+      "response_format": "openai",
+      "description": "Custom embedding service with non-OpenAI API"
+    },
+    {
+      "name": "Hugging Face Compatible Server",
+      "endpoint": "http://localhost:8083",
+      "models": ["mistral-7b", "llama-2-7b"],
+      "weight": 2,
+      "api_key_required": false,
+      "adapter_type": "huggingface",
+      "description": "Local server with Hugging Face API format"
+    }
+  ],
+  "load_balancing": {
+    "strategy": "weighted",
+    "health_check_interval": 30,
+    "retry_attempts": 3
+  },
+  "api_keys": {
+    "openai": "your-openai-api-key-here"
+  }
+}
